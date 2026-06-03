@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mustafa Patharia - Senior Software Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', 'Segoe UI', 'Inter', sans-serif;
+            background: #f5f5f7;
+            padding: 20px;
+            line-height: 1.47;
+            color: #1d1d1f;
+        }
+
+        .resume-container {
+            max-width: 210mm;
+            min-height: 297mm;
+            background: white;
+            margin: 0 auto;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            display: flex;
+            page-break-inside: avoid;
+        }
+
+        /* Left Column - Main Content */
+        .left-column {
+            flex: 0 0 65%;
+            padding: 40px 35px;
+            background: #ffffff;
+        }
+
+        /* Right Column - Sidebar */
+        .right-column {
+            flex: 0 0 35%;
+            background: #f5f5f7;
+            color: #1d1d1f;
+            padding: 40px 25px;
+            min-height: 297mm;
+            border-left: 1px solid #e0e0e0;
+        }
+
+        /* Profile Image */
+        .profile-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            overflow: hidden;
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .profile-placeholder {
+            font-size: 48px;
+            color: #cccccc;
+            font-weight: 300;
+        }
+
+        /* Header */
+        .header {
+            margin-bottom: 24px;
+            page-break-inside: avoid;
+            page-break-after: avoid;
+        }
+
+        .header h1 {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;
+            font-size: 30px;
+            font-weight: 600;
+            color: #1d1d1f;
+            margin-bottom: 6px;
+            letter-spacing: -0.374px;
+        }
+
+        .header .title {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+            font-size: 13px;
+            color: #1d1d1f;
+            font-weight: 400;
+            margin-bottom: 12px;
+            letter-spacing: -0.374px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            font-size: 9px;
+            color: #7a7a7a;
+            margin-bottom: 16px;
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .contact-info a {
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: 400;
+        }
+
+        .contact-info a:hover {
+            color: #0071e3;
+            text-decoration: underline;
+        }
+
+        /* Summary */
+        .summary {
+            background: #f5f5f7;
+            padding: 16px 16px;
+            border-left: none;
+            margin-bottom: 20px;
+            font-size: 11px;
+            color: #1d1d1f;
+            line-height: 1.6;
+            page-break-inside: avoid;
+            border-radius: 12px;
+        }
+
+        .summary strong {
+            color: #1d1d1f;
+            font-weight: 600;
+            letter-spacing: -0.224px;
+        }
+
+        /* Section Headings */
+        .section-title {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;
+            font-size: 17px;
+            font-weight: 600;
+            color: #1d1d1f;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #e0e0e0;
+            text-transform: uppercase;
+            letter-spacing: -0.374px;
+            page-break-after: avoid;
+            page-break-inside: avoid;
+        }
+
+        .right-column .section-title {
+            color: #1d1d1f;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Experience */
+        .experience-item {
+            margin-bottom: 20px;
+            page-break-inside: avoid;
+        }
+
+        .experience-header {
+            margin-bottom: 8px;
+            page-break-after: avoid;
+        }
+
+        .job-title {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            color: #1d1d1f;
+            margin-bottom: 4px;
+        }
+
+        .company {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+            font-size: 13px;
+            color: #0066cc;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .date-location {
+            font-size: 11px;
+            color: #7a7a7a;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .tools-used {
+            font-size: 11px;
+            font-style: italic;
+            color: #7a7a7a;
+            margin-bottom: 8px;
+            background: transparent;
+            padding: 0;
+            border-radius: 0;
+        }
+
+        .experience-item ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .experience-item li {
+            font-size: 11px;
+            color: #1d1d1f;
+            margin-bottom: 6px;
+            padding-left: 17px;
+            position: relative;
+            line-height: 1.47;
+        }
+
+        .experience-item li::before {
+            content: "▪";
+            position: absolute;
+            left: 0;
+            color: #0066cc;
+            font-weight: bold;
+        }
+
+        .experience-item li strong {
+            color: #1d1d1f;
+            font-weight: 600;
+        }
+
+        /* Projects */
+        .project-item {
+            margin-bottom: 15px;
+            page-break-inside: avoid;
+        }
+
+        .project-title {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            color: #1d1d1f;
+            margin-bottom: 3px;
+            page-break-after: avoid;
+        }
+
+        .project-subtitle {
+            font-size: 11px;
+            color: #0066cc;
+            margin-bottom: 4px;
+            font-weight: 500;
+        }
+
+        .project-item p {
+            font-size: 11px;
+            color: #1d1d1f;
+            line-height: 1.47;
+        }
+
+        .project-item p strong {
+            color: #1d1d1f;
+            font-weight: 600;
+        }
+
+        /* Right Column - Skills */
+        .skill-tag {
+            display: inline-block;
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            padding: 6px 12px;
+            margin: 4px 4px 4px 0;
+            border-radius: 9999px;
+            font-size: 9px;
+            font-weight: 500;
+            color: #1d1d1f;
+        }
+
+        .skill-group {
+            margin-bottom: 16px;
+        }
+
+        /* Education */
+        .education-item {
+            margin-bottom: 16px;
+            page-break-inside: avoid;
+        }
+
+        .education-item .degree {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 3px;
+            page-break-after: avoid;
+            color: #1d1d1f;
+        }
+
+        .education-item .field {
+            font-size: 11px;
+            margin-bottom: 3px;
+            color: #7a7a7a;
+        }
+
+        .education-item .date {
+            font-size: 11px;
+            color: #7a7a7a;
+            margin-bottom: 3px;
+        }
+
+        .education-item .school {
+            font-size: 11px;
+            color: #1d1d1f;
+        }
+
+        /* Languages */
+        .language-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+            font-size: 11px;
+        }
+
+        .language-bar {
+            width: 100px;
+            height: 6px;
+            background: #e0e0e0;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .language-fill {
+            height: 100%;
+            background: #0066cc;
+            border-radius: 3px;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                color-adjust: exact !important;
+            }
+
+            .resume-container {
+                box-shadow: none;
+                page-break-after: auto;
+                width: 100%;
+                min-height: 594mm;
+                display: flex;
+            }
+
+            .left-column {
+                page-break-inside: auto;
+                flex: 0 0 65%;
+            }
+
+            .right-column {
+                background: #f5f5f7 !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                flex: 0 0 35%;
+                min-height: 594mm;
+                position: relative;
+            }
+
+            .experience-item,
+            .project-item {
+                page-break-inside: avoid;
+            }
+
+            .section-title {
+                page-break-after: avoid;
+            }
+
+            .skill-tag {
+                background: #ffffff !important;
+                border: 1px solid #e0e0e0 !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+
+            .summary {
+                background: #f5f5f7 !important;
+                border-left: none !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                border-radius: 12px;
+            }
+
+            .profile-image {
+                background: #ffffff !important;
+                border: 1px solid #e0e0e0 !important;
+                -webkit-print-color-adjust: exact !important;
+            }
+
+            a {
+                color: #0066cc;
+                text-decoration: none;
+            }
+        }
+
+        /* Divider */
+        .divider {
+            height: 1px;
+            background: #e0e0e0;
+            margin: 20px 0;
+        }
+
+        .right-column .divider {
+            background: #e0e0e0;
+            margin: 16px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <!-- Left Column -->
+        <div class="left-column">
+            <!-- Header -->
+            <div class="header">
+                <h1>MUSTAFA PATHARIA</h1>
+                <div class="title">Senior Software Engineer | AI Engineer</div>
+                <div class="contact-info">
+                    <span>📧 <a href="mailto:patharia52@gmail.com">patharia52@gmail.com</a></span>
+                    <span>📱 +971 527212084</span>
+                    <span>📍 Dubai, UAE</span>
+                    <span>💼 <a href="https://linkedin.com/in/mustafa-patharia" target="_blank">LinkedIn</a></span>
+                    <span>⚡ <a href="https://github.com/MustafaPatharia" target="_blank">GitHub</a></span>
+                </div>
+            </div>
+
+            <!-- Summary -->
+            <div class="summary">
+                <strong>5+ years of experience in Full-Stack Engineering</strong>, specializing in building <strong>multi-tenant SaaS platforms</strong>, <strong>distributed backend systems</strong>, and <strong>AI-driven development workflows</strong> using <strong>Node.js/NestJS</strong>, <strong>Angular</strong>, <strong>React</strong>, <strong>Next.js</strong>, <strong>PostgreSQL</strong>, <strong>Redis</strong>, and cloud infrastructure (<strong>AWS/GCP</strong>). Expert in <strong>MCP server development</strong>, <strong>AI agent frameworks</strong>, <strong>microservices architecture</strong>, and <strong>production-ready enterprise applications</strong>.
+            </div>
+
+            <!-- Work Experience -->
+            <h2 class="section-title">Work Experience</h2>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="job-title">Senior Application Developer (Tech Lead @ <a href="https://infithra.com" target="_blank" style="color: #0066cc; text-decoration: underline;">infithra</a>)</div>
+                    <div class="company">KPI</div>
+                    <div class="date-location">
+                        <span>July 2022 – Present</span>
+                        <span>Dubai, UAE</span>
+                    </div>
+                    <div class="tools-used">Node.js · NestJS · Angular · React · Next.js · PostgreSQL · Redis · Docker · AWS · GCP · GitHub Copilot · MCP</div>
+                </div>
+                <ul>
+                    <li>Architected <strong>multi-tenant HR & Payroll SaaS platform</strong> with <strong>end-to-end ownership</strong> (Node.js/NestJS + Angular/React) — <strong>800+ production APIs</strong> with tenant isolation and <strong>UAE labor law compliance</strong></li>
+                    <li>Implemented <strong>hybrid RBAC/ABAC authorization system</strong> enabling <strong>granular access control</strong> per resource and custom user-defined access rules</li>
+                    <li>Optimized <strong>Docker build pipeline from 27-30 minutes to 5-8 minutes</strong> using <strong>BuildKit</strong>, <strong>layer caching</strong>, and <strong>NGINX base reuse</strong></li>
+                    <li>Built <strong>ProofHub MCP server</strong> and <strong>specialized AI agents</strong> (frontend/backend/debug) with <strong>design system</strong> and <strong>persistent memory</strong> — reduced manual task overhead <strong>40%</strong></li>
+                    <li>Engineered <strong>automated client provisioning</strong> with <strong>full feature delivery responsibility</strong> reducing onboarding from <strong>20+ minutes of manual tasks to automated ~40 seconds</strong> — database creation, schema migration, seed data, and notification workflows</li>
+                    <li>Led <strong>6-8 developer team</strong> — established <strong>code review standards</strong>, <strong>unit testing workflows</strong>, <strong>Git branching strategies</strong>, and <strong>CI/CD automation</strong></li>
+                    <li>Owned <strong>production troubleshooting and debugging</strong> with <strong>Grafana/New Relic monitoring</strong> — maintained <strong>99.9% uptime</strong> across distributed services</li>
+                </ul>
+            </div>
+            <div class="divider"></div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="job-title">Software Developer (Full Stack)</div>
+                    <div class="company">PACE Group</div>
+                    <div class="date-location">
+                        <span>March 2021 – July 2022</span>
+                        <span>Sharjah, UAE</span>
+                    </div>
+                    <div class="tools-used">Vue.js · Laravel · PHP · MySQL · WebSockets · AWS (EC2, SES)</div>
+                </div>
+                <ul>
+                    <li>Developed <strong>Vue.js/Laravel applications</strong> with <strong>real-time WebSocket collaboration</strong>, <strong>JWT authentication</strong>, and <strong>microservices architecture</strong></li>
+                    <li>Designed and deployed <strong>RESTful APIs</strong> with comprehensive <strong>testing coverage</strong>, <strong>monitoring</strong>, and <strong>CI/CD automation</strong></li>
+                    <li>Managed <strong>AWS infrastructure</strong> (EC2, SES) with <strong>auto-scaling</strong>, <strong>load balancing</strong>, and <strong>CloudWatch monitoring</strong></li>
+                </ul>
+            </div>
+
+            <!-- Key Projects -->
+            <h2 class="section-title" style="page-break-before: always; margin-top: 30px;">Key Projects</h2>
+
+            <div class="project-item">
+                <div class="project-title">HR & Payroll Management Platform</div>
+                <div class="project-subtitle">Node.js · PostgreSQL · Angular</div>
+                <p><strong>Multi-tenant SaaS</strong> with <strong>UAE payroll compliance</strong>, <strong>attendance tracking</strong>, and <strong>automated statutory calculations</strong> serving <strong>600+ users</strong></p>
+            </div>
+
+            <div class="project-item">
+                <div class="project-title">ProofHub MCP Server</div>
+                <div class="project-subtitle">Node.js MCP Protocol</div>
+                <p><strong>Model Context Protocol</strong> server enabling <strong>AI agents</strong> to interact with <strong>ProofHub</strong> project management platform — task retrieval, commenting, and <strong>workflow automation</strong></p>
+            </div>
+
+            <div class="project-item">
+                <div class="project-title">ProofHub Task Timer</div>
+                <div class="project-subtitle">Swift · SwiftData · ProofHub API</div>
+                <p><strong>macOS menu bar application</strong> for <strong>ProofHub time tracking</strong> with <strong>pause/resume across sessions</strong>, <strong>bulk save functionality</strong>, and <strong>local-first data storage</strong> — <strong>open-sourced</strong></p>
+            </div>
+
+            <div class="project-item">
+                <div class="project-title">AI Development Workflow System</div>
+                <div class="project-subtitle">GitHub Copilot · Custom AI Agents</div>
+                <p>Specialized <strong>AI agent framework</strong> with <strong>sequential task workflows</strong>, <strong>persistent memory</strong> across sessions, and <strong>custom design system</strong> — integrated <strong>GitHub Copilot</strong> with <strong>ProofHub MCP server</strong> for <strong>automated task management</strong></p>
+            </div>
+
+            <div class="project-item">
+                <div class="project-title">Equipment & Fleet Rental System</div>
+                <div class="project-subtitle">Node.js · Express · PostgreSQL · Next.js</div>
+                <p><strong>SaaS platform</strong> for rental operations with <strong>GPS tracking</strong>, <strong>dynamic pricing</strong>, <strong>contract management</strong>, and <strong>real-time inventory</strong></p>
+            </div>
+
+            <div class="project-item">
+                <div class="project-title">Content Management System</div>
+                <div class="project-subtitle">Node.js · Express · MySQL · React.js</div>
+                <p>Custom <strong>CMS</strong> with <strong>multilingual support</strong>, <strong>role-based publishing</strong>, and <strong>SEO optimization</strong> for corporate website</p>
+            </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="right-column">
+            <!-- Profile Image -->
+            <div class="profile-image">
+                <img src="Mustafa Profile.PNG" alt="Mustafa Patharia">
+            </div>
+
+            <!-- Education -->
+            <h2 class="section-title">Education</h2>
+
+            <div class="education-item">
+                <div class="degree">Bachelor of Engineering</div>
+                <div class="field">Computer Science</div>
+                <div class="date">Aug 2016 – Oct 2020</div>
+                <div class="school">University of Mumbai, Maharashtra, India</div>
+                <div class="school">CGPA: 7.06/10</div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- Technical Skills -->
+            <h2 class="section-title">Technical Skills</h2>
+
+            <div class="skill-group">
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">NestJS</span>
+                <span class="skill-tag">Express.js</span>
+                <span class="skill-tag">Angular</span>
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">Vue.js</span>
+                <span class="skill-tag">Next.js</span>
+                <span class="skill-tag">PostgreSQL</span>
+                <span class="skill-tag">MySQL</span>
+                <span class="skill-tag">MongoDB</span>
+                <span class="skill-tag">Redis</span>
+                <span class="skill-tag">AWS</span>
+                <span class="skill-tag">GCP</span>
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">Kubernetes</span>
+                <span class="skill-tag">REST API</span>
+                <span class="skill-tag">GraphQL</span>
+                <span class="skill-tag">Pub/Sub</span>
+                <span class="skill-tag">WebSockets</span>
+                <span class="skill-tag">gRPC</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">TypeScript</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">PHP</span>
+                <span class="skill-tag">GitHub Copilot</span>
+                <span class="skill-tag">MCP</span>
+                <span class="skill-tag">AI Agents</span>
+                <span class="skill-tag">Microservices</span>
+                <span class="skill-tag">Multi-tenant</span>
+                <span class="skill-tag">OAuth</span>
+                <span class="skill-tag">JWT</span>
+                <span class="skill-tag">RBAC/ABAC</span>
+                <span class="skill-tag">Laravel</span>
+                <span class="skill-tag">FastAPI</span>
+                <span class="skill-tag">Odoo ORM</span>
+                <span class="skill-tag">React Native</span>
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">CI/CD</span>
+                <span class="skill-tag">Grafana</span>
+                <span class="skill-tag">New Relic</span>
+                <span class="skill-tag">Tailwind CSS</span>
+                <span class="skill-tag">Bootstrap</span>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- Soft Skills -->
+            <h2 class="section-title">Soft Skills</h2>
+
+            <p style="font-size: 11px; margin-top: 8px; margin-bottom: 12px; line-height: 1.47; color: #1d1d1f;">
+                Quick Learner · Cross-Functional Collaboration · Problem Solving · Mentoring · Agile/Scrum · Communication · Time Management · Adaptability · Code Review
+            </p>
+
+            <div class="divider"></div>
+
+            <!-- Spoken Languages -->
+            <h2 class="section-title">Spoken Languages</h2>
+
+            <p style="font-size: 11px; margin-top: 8px; margin-bottom: 12px; color: #1d1d1f;">English (Fluent)<br>Hindi (Native)</p>
+
+            <div class="divider"></div>
+
+            <!-- Citizenship -->
+            <h2 class="section-title">Citizenship</h2>
+            <p style="font-size: 11px; margin-top: 8px; color: #1d1d1f;">Indian Citizen<br>Based in UAE</p>
+        </div>
+    </div>
+</body>
+</html>
