@@ -1,0 +1,209 @@
+%%%%%%%%%%%%%%%%%
+% This is an AltaCV template modified for Mustafa Patharia
+% AltaCV Template: https://github.com/liantze/AltaCV
+%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% Fonts
+\usepackage[rm]{roboto}
+\usepackage[defaultsans]{lato}
+\renewcommand{\familydefault}{\sfdefault}
+
+% Colors
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkBlue}{HTML}{1A5490}
+\definecolor{AccentBlue}{HTML}{2E86C1}
+\colorlet{name}{black}
+\colorlet{tagline}{DarkBlue}
+\colorlet{heading}{DarkBlue}
+\colorlet{headingrule}{AccentBlue}
+\colorlet{subheading}{SlateGrey}
+\colorlet{accent}{AccentBlue}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Bullet point
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\begin{document}
+
+\name{Mustafa Patharia}
+\tagline{Senior Software Engineer}
+
+\personalinfo{%
+  \email{patharia52@gmail.com}
+  \phone{+971 527212084}
+  \location{Dubai, UAE}
+  \linkedin{mustafa-patharia}
+  \github{MustafaPatharia}
+}
+
+\makecvheader
+
+%% Tagline
+\begin{quote}
+\textbf{5+ years of experience in Full-Stack Engineering}, specializing in building \textbf{multi-tenant SaaS platforms}, \textbf{distributed backend systems}, and \textbf{AI-driven development workflows} using \textbf{Node.js/NestJS}, \textbf{Angular}, \textbf{Next.js}, \textbf{PostgreSQL}, \textbf{Redis}, and cloud infrastructure (\textbf{AWS/GCP}). Expert in \textbf{MCP server development}, \textbf{AI agent frameworks}, \textbf{microservices architecture}, and \textbf{production-ready enterprise applications}.
+\end{quote}
+
+\medskip
+
+%% Two columns layout
+\columnratio{0.6}
+\begin{paracol}{2}
+
+%% LEFT COLUMN - EXPERIENCE
+\cvsection{Work Experience}
+
+\cvevent{Senior Application Developer (Tech Lead)}{KPI - infithra}{July 2022 -- Present}{Dubai, UAE}
+
+\small{\textit{Tools Used - Node.js, NestJS, Angular, PostgreSQL, Redis, Docker, AWS, GCP, GitHub Copilot, MCP}}
+
+\begin{itemize}
+\item Designed complete \textbf{multi-tenant HR \& Payroll SaaS platform} using \textbf{Node.js/NestJS} with \textbf{modular architecture} and \textbf{reusable components} — built \textbf{800+ production APIs} with tenancy isolation, fully \textbf{customizable/configurable} via rules compliant with \textbf{UAE labor law}
+\item Built \textbf{specialized AI agents} (frontend, backend, debugging workflows), \textbf{ProofHub MCP server}, and \textbf{design system} with \textbf{persistent memory across sessions} — standardized UI/UX guidelines accelerating development velocity
+\item Optimized \textbf{Docker build times} from \textbf{27-30 minutes to 5-8 minutes} using \textbf{BuildKit}, \textbf{layer caching}, \textbf{NGINX base image reuse}, and \textbf{node\_modules caching}
+\item Implemented \textbf{hybrid RBAC+ABAC authorization system} enabling granular access control per resource and custom user-defined access rules
+\item Single-handedly managed \textbf{6-8 developer team} — established \textbf{code review processes}, \textbf{unit testing workflows}, \textbf{Git branching strategies}, and \textbf{CI/CD pipelines}
+\item Built fully \textbf{automated client provisioning system} reducing onboarding to \textbf{\textasciitilde40 seconds} — handles database creation, table setup, function deployment, \textbf{data seeding}, and \textbf{automated notifications}
+\end{itemize}
+
+\divider
+
+\cvevent{Software Developer (Full Stack)}{PACE Group}{March 2021 -- July 2022}{Sharjah, UAE}
+
+\small{\textit{Tools Used - Vue.js, Laravel, PHP, MySQL, WebSockets, AWS (EC2, SES)}}
+
+\begin{itemize}
+\item Developed modular \textbf{full-stack applications} using \textbf{Vue.js} and \textbf{Laravel} with emphasis on code reusability and maintainability
+\item Implemented \textbf{real-time collaboration features} using \textbf{WebSockets} enabling live updates across \textbf{distributed systems}
+\item Managed complete \textbf{API lifecycle} (design, implementation, testing, deployment, monitoring) ensuring \textbf{high availability}
+\item Deployed applications on \textbf{AWS infrastructure} (EC2, SES) with focus on \textbf{scalability and reliability}
+\end{itemize}
+
+\medskip
+
+\cvsection{Key Projects}
+
+\cvevent{ProofHub MCP Server}{Published on Glama}{}{}
+\textbf{Model Context Protocol} server enabling \textbf{AI agents} to interact with \textbf{ProofHub} project management platform — task retrieval, commenting, and \textbf{workflow automation}
+
+\divider
+
+\cvevent{AI Development Workflow System}{GitHub Copilot · Custom AI Agents}{}{}
+Specialized \textbf{AI agent framework} with \textbf{sequential task workflows}, \textbf{persistent memory} across sessions, and \textbf{custom design system} — integrated \textbf{GitHub Copilot} with \textbf{ProofHub MCP server} for \textbf{automated task management}
+
+\divider
+
+\cvevent{Odoo-NetSuite Integration}{Python · Odoo ORM · REST API}{}{}
+Custom \textbf{Odoo addon} automating \textbf{invoice and payment synchronization} from \textbf{Odoo POS} to \textbf{NetSuite} based on \textbf{configurable mapping rules}
+
+\divider
+
+\cvevent{NetSuite Warehouse Inventory App}{React Native · NestJS}{}{}
+\textbf{Mobile inventory management system} with \textbf{RFID hardware scanner integration}, \textbf{real-time NetSuite sync}, and \textbf{NestJS middleware}
+
+\divider
+
+\cvevent{HR \& Payroll Management Platform}{Node.js · PostgreSQL · Angular}{}{}
+\textbf{Multi-tenant SaaS} with \textbf{UAE payroll compliance}, \textbf{attendance tracking}, and \textbf{automated statutory calculations} serving \textbf{600+ users}
+
+\switchcolumn
+
+%% RIGHT COLUMN - SKILLS & EDUCATION
+\cvsection{Technical Skills}
+
+\cvtag{Node.js}
+\cvtag{NestJS}
+\cvtag{Express.js}
+\cvtag{Angular}
+\cvtag{React}
+\cvtag{Vue.js}
+\cvtag{Next.js}
+
+\medskip
+
+\cvtag{PostgreSQL}
+\cvtag{MySQL}
+\cvtag{MongoDB}
+\cvtag{Redis}
+
+\medskip
+
+\cvtag{AWS}
+\cvtag{GCP}
+\cvtag{Docker}
+\cvtag{Kubernetes}
+
+\medskip
+
+\cvtag{REST API}
+\cvtag{GraphQL}
+\cvtag{Pub/Sub}
+\cvtag{WebSockets}
+\cvtag{gRPC}
+
+\medskip
+
+\cvtag{JavaScript}
+\cvtag{TypeScript}
+\cvtag{Python}
+\cvtag{PHP}
+
+\medskip
+
+\cvtag{GitHub Copilot}
+\cvtag{MCP}
+\cvtag{AI Agents}
+
+\medskip
+
+\cvtag{Microservices}
+\cvtag{Multi-tenant}
+\cvtag{OAuth}
+\cvtag{JWT}
+\cvtag{RBAC/ABAC}
+
+\medskip
+
+\cvtag{Laravel}
+\cvtag{FastAPI}
+\cvtag{Odoo ORM}
+\cvtag{React Native}
+
+\medskip
+
+\cvtag{Git}
+\cvtag{CI/CD}
+\cvtag{Tailwind CSS}
+\cvtag{Bootstrap}
+
+\medskip
+
+\cvsection{Education}
+
+\cvevent{Bachelor of Engineering}{Computer Science}{Aug 2016 -- Oct 2020}{}
+\textbf{University of Mumbai}, Maharashtra, India\\
+CGPA: 7.06/10
+
+\medskip
+
+\cvsection{Languages}
+
+\cvskill{English}{5}
+\cvskill{Hindi}{5}
+
+\medskip
+
+\cvsection{Citizenship}
+
+Indian Citizen\\
+Based in UAE
+
+\end{paracol}
+
+\end{document}

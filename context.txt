@@ -1,0 +1,93 @@
+Let me read the resume carefully before giving you the analysis.
+The feedback is spot-on. Here's the full breakdown:
+
+Problem 1: No "at-a-glance" core skills block
+The most critical issue. An HR skimming for 10 seconds sees: name, title, a wall of paragraph text (summary), then immediately a bullet-heavy job description. There's no moment where your core identity — what kind of engineer you are — is visible in 3 seconds. The Technical Skills section is buried at the bottom of page 1, after all the experience, and even there it reads like a flat list with no hierarchy or emphasis.
+
+Problem 2: Profile Summary is dense prose
+It's well-written but it's a block paragraph. HR doesn't read paragraphs in a first pass. The key selling points (multi-tenant SaaS, founding engineer, production-grade systems) are hidden inside sentences.
+
+Problem 3: Experience bullets are too long and too many
+The KPI/infithra role has 10 bullets, several of them 2-3 lines long. That's a job description, not a resume. The strongest points (founding engineer, 30-40% incident reduction, 30-second provisioning) are buried among weaker ones. No visual weight difference between high-impact and routine achievements.
+
+Problem 4: Technical Skills section is flat and misplaced
+It's at the bottom of page 1 after all the experience content. It reads as an afterthought. The categories exist but there's no visual signal for what you're strongest in vs. what you've just used. Angular, Node.js, PostgreSQL, AWS — your actual core stack — get no special treatment vs. Xcode or Mapbox which are incidental.
+
+Problem 5: Projects section is underdeveloped
+Three lines each with no impact metrics except "600+ users". Given you built these from scratch, this section should be either stronger or removed to reduce clutter.
+
+The Fix — Proposed Structure
+Before I rebuild it, confirm this order and approach:
+Header — name, title, contacts (current, fine)
+Core Competencies block — 6–9 bold tags in a 3-column grid (e.g. Multi-tenant SaaS Architecture · Microservices Design · Payroll Systems · Team Leadership · Cloud Infrastructure · API Platform Design) — this is the "at-a-glance" fix
+Profile Summary — shortened to 3–4 punchy lines max
+Experience — trimmed to 5–6 bullets per role, strongest ones only, with impact numbers kept
+Technical Skills — moved up, reformatted with your primary stack visually emphasized
+Projects — keep or cut? Your call
+Education at bottom
+Does this structure work for you? And one question: are you targeting a specific role type right now (backend-heavy, full-stack, tech lead) — so I know which competencies to front-load?
+You said: I'm sharing you my git up profile also.
+I'm sharing you my git up profile also. So there are some projects, like, that I have did. For example, creating a m c p servers for a proof of... and integrating creating multiple AI agents for specialized agents for doing the task based on sequence wise workflow while to improve the productivity of my own in day to day process. So I've created m c p servers, AI agents. Okay. Then I have used the prod. Okay. Then add... that I have also created a design design system for the prod. So it it also uses a proper design while doing front end development. Also, I have used the graphifying code review, which reduces the prod tokens. And instead of reviewing the code multiple time, also add a memory memory and... so every session is persistent. across, uh, chatting with Claude. Okay. So that that also... I have added I have added in my, uh, day to day. So I have, uh, told that, uh, people, uh, use Claude and AI agents now. So that's why you need to add it. Okay. Now there are many projects in my, uh, GitHub. So there are two projects that recently I have done as a freelancing. So in projects that you can add, that projects also... that is, uh, Odo POSS and its root integration. And, uh, and the warehouse inventory app creation with the NetSuite. Okay? So like this, I will share the link of GitHub. Okay. LinkedIn also, I will share. There is one more project that I created for proofhuh time tracker
+github: https://github.com/MustafaPatharia
+so
+Show less
+7:28 PM
+Claude responded: Let me fetch your GitHub profile first.
+Let me fetch your GitHub profile first.
+Fetched: MustafaPatharia - Overview
+Fetched: MustafaPatharia - Overview
+Let me also check the repositories list for the specific projects you mentioned.
+Failed to fetch: https://github.com/MustafaPatharia?tab=repositories
+Failed to fetch: https://github.com/MustafaPatharia?tab=repositories
+Good enough — I have the pinned repos and the context you described. Before I proceed to rebuild the resume, I need to clarify a few things so nothing gets fabricated.
+From GitHub I can see the pinned repos are older projects (Vue Stories, Amazon Clone, Spotify Clone, etc.) — the AI agents, MCP servers, ProofHub time tracker, Odoo POS, and NetSuite warehouse app are not pinned and likely private or not yet pushed publicly.
+So here's what I need from you before writing anything:
+1. The AI/MCP work — you mentioned:
+MCP server for ProofHub
+Specialized AI agents with sequential workflow
+Design system for the AI workflow
+Graphify code review (token reduction + memory persistence)
+Are these in a public GitHub repo I can link to, or should I describe them as personal productivity tooling without a link?
+2. Freelance projects:
+Odoo POS + route integration — can you give me one line on what this was? (What did you build, for whom broadly, tech used)
+NetSuite warehouse inventory app — same: what was built, what tech?
+ProofHub time tracker — what exactly is this? A Chrome extension, a Node script, an app?
+3. Role targeting — you're applying to senior full-stack / tech lead roles. Should I keep the resume balanced (frontend + backend) or push it more backend/architecture-heavy, since that's your actual strength?
+Once you answer these I'll build the full updated resume.
+You said: i have updated the pins
+i have updated the pins
+7:36 PM
+Claude responded: The pins are still showing the old ones (ReactJS-Chatbot, vue-stories, etc.
+Fetched: MustafaPatharia - Overview
+Fetched: MustafaPatharia - Overview
+The pins are still showing the old ones (ReactJS-Chatbot, vue-stories, etc.) — GitHub may take a few minutes to cache the update. The pinned section might also require being logged in to reflect changes. Let me try fetching the repos directly.
+Searched the web
+Searched the web
+Good — found the ProofHub MCP server on Glama, which confirms it's published. The pinned repos on GitHub haven't refreshed yet for me (likely a cache issue on my end). But I have enough now — the ProofHub MCP is real and published, and I have all the context from your description for the other projects.
+I still need the two answers I asked before building:
+1. Odoo POS + NetSuite warehouse — just one line each:
+What did you build specifically? (e.g. custom POS module? integration between Odoo and a delivery route system?)
+Tech stack used (Python/Odoo ORM? REST API? Node?)
+2. Role targeting — backend/architecture-heavy, or balanced full-stack? This determines what goes in the Core Competencies block at the top.
+Once you give me these two, I'll build the full resume.
+You said: What did you build specifically?
+What did you build specifically? (e.g. custom POS module? integration between Odoo and a delivery route system? It is a Odo integration for creating the invoices and the payments which is created in Odo. It automatically sync to the NetSuite on a on a configuration basis that the NetSuite will be posting it to the Odo. So it's a connection between Odo and NetSuite for posting invoices and payments. )
+Tech stack used (Python/Odoo ORM? REST API? Node?) Used the Odo, ORM, and Python, and the rest API. And mostly, it is a Odo add on, which are... which Odo allows to build custom add ons for, uh, for their system.
+7:38 PM
+Claude responded: And the NetSuite warehouse app — what was that separately, or is it the same project?
+And the NetSuite warehouse app — what was that separately, or is it the same project?
+And role targeting — backend/architecture-heavy or balanced full-stack?
+You said: No, the Warehouse app is still under process, uh, that I have not started or pushed, but, yes, you can write, because documentation, everything I have.
+No, the Warehouse app is still under process, uh, that I have not started or pushed, but, yes, you can write, because documentation, everything I have. Uh, if you need any information on that, I will help you, uh, write it. It's a inventory app where the user will, uh, I've created the mobile app where the user will scan the RFIDs with the hardware scanner, and the mobile app will directly connect it to, uh, to the NetSuite and update the sync and everything showing, uh, the product quantity, bins, and warehouse... which warehouse it belongs to, everything directly connected from the netsuite
+7:38 PM
+Claude responded: Got it.
+Got it. Tech stack for the warehouse app — React Native? And what's the NetSuite integration method — REST API, SuiteScript, or SOAP?
+Also still need: backend-heavy or balanced full-stack for role targeting?
+You said: Is it Next.
+Is it Next. js, Nest. js, uh, the middleware, the back endware? It will be a middle, uh, API layer where, uh, mobile, I will not directly connect to the NetSuite. It will connect to the middleware layer, uh, where it will provide us standard, uh, APIs. Uh, it's like a middle system... middle middle layer. Okay? And it will also provide the user management for the app or which, uh, user needs to have that access or, uh, does not have the... where the access. Okay? So that is the, uh, part of the middle middleware. The app is, uh, is in the React Native. Okay? The
+7:39 PM
+Claude responded: React Native + NestJS middleware + NetSuite REST API.
+React Native + NestJS middleware + NetSuite REST API. Got it.
+Role targeting — backend/architecture-heavy or balanced full-stack? Last thing I need before building.
+You said: it's completely back end full.
+it's completely back end full... back end front end architecture heavy, full stack it is. And it is... I'm only handling the mobile part and the middleware part. Okay? That is what the the job is for this for this project. Okay. The other NetSuite part is done by the developers so that you don't need to include anything.

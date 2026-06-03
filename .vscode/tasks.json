@@ -1,0 +1,49 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Compile LaTeX Resume",
+      "type": "shell",
+      "command": "/usr/local/texlive/2026basic/bin/universal-darwin/latexmk",
+      "args": [
+        "-pdf",
+        "-interaction=nonstopmode",
+        "${file}"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Open PDF",
+      "type": "shell",
+      "command": "open",
+      "args": [
+        "${fileDirname}/${fileBasenameNoExtension}.pdf"
+      ],
+      "presentation": {
+        "echo": false,
+        "reveal": "never",
+        "focus": false,
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "Compile and Open Resume",
+      "dependsOn": [
+        "Compile LaTeX Resume",
+        "Open PDF"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    }
+  ]
+}
